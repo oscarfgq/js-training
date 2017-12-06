@@ -1,6 +1,6 @@
 'use strict';
 
-var counter = (function() {
+function makeCounter() {
   var privateCounter = 0;   // not exposed
 
   function changeBy(val) {  // not exposed
@@ -24,12 +24,19 @@ var counter = (function() {
     decrement: decrement,
     value: value
   };
+}
 
-})();
+var counter1 = makeCounter();
+var counter2 = makeCounter();
 
-console.log(counter.value()); // logs 0
-counter.increment();
-counter.increment();
-console.log(counter.value()); // logs 2
-counter.decrement();
-console.log(counter.value()); // logs 1
+console.log(counter1.value());
+console.log(counter2.value());
+counter1.increment();
+counter1.increment();
+counter2.decrement();
+console.log(counter1.value());
+console.log(counter2.value());
+counter2.increment();
+counter1.decrement();
+console.log(counter1.value());
+console.log(counter2.value());
