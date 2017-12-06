@@ -1,9 +1,8 @@
 'use strict';
 
-catName("Chloe");
+/* Example 1 */
+catName('Chloe');
 
 function catName(name) {
-  console.log("My cat's name is " + name);  // My cat's name is Chloe
+  console.log('My cat\'s name is ' + name);  // My cat's name is Chloe -- hoists function declaration
 }
-
-// Hoists function declaration
