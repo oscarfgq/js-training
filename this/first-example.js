@@ -1,5 +1,0 @@
-/*
-
-  Here will come some interesting code.
-
-*/
